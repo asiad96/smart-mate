@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "emergency_contacts.apps.EmergencyContactsConfig",
     "phonenumber_field",
+    "rest_framework",
 ]
 
 MIDDLEWARE = [
