@@ -10,3 +10,6 @@ class Contact(models.Model):
     last_name = models.CharField(max_length=50)
     # phone_number not optional
     phone_number = PhoneNumberField(blank=False)
+
+    def __str__(self):
+        return f"{self.first_name} {self.last_name} - {self.phone_number}"
