@@ -1,4 +1,4 @@
-from django.shortcuts import redirect
+from django.http import HttpResponse
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.decorators import api_view
@@ -46,5 +46,7 @@ def delete_contact(request, id):
         )
 
 
-def redirect_to_contacts(request):
-    return redirect("/api/contacts/")
+def api_home(request):
+    return HttpResponse(
+        "<h1>Emergency contacts API</h1><p>This API allows you to manage contacts. Visit <a href='/api/contacts/'>/api/contacts/</a> for more information.</p>"
+    )
