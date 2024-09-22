@@ -1,3 +1,4 @@
+from django.shortcuts import redirect
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.decorators import api_view
@@ -43,3 +44,7 @@ def delete_contact(request, id):
         return Response(
             {"message": "Deleted successfully"}, status=status.HTTP_204_NO_CONTENT
         )
+
+
+def redirect_to_contacts(request):
+    return redirect("/api/contacts/")
