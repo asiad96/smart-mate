@@ -25,11 +25,11 @@ API can be tested using the following endpoint on the deployed version of the ap
 
 Base URL: https://smartmate-49ddea62e918.herokuapp.com/
 
-i List all contacts
+- i List all contacts
     - Method: GET
     - URL /api/contacts/
     - List of all contact.
-ii Create a contact
+- ii Create a contact
     - Method: POST
     - URL: /api/create
     - Request JSON Body:
@@ -38,6 +38,6 @@ ii Create a contact
     "last_name": "Doe",
     "phone_number": "+1234567890"
     }```
-iii Delete a contact
+- iii Delete a contact
     - Method: DELETE
     - URL: /api/contact/<id>
