@@ -6,7 +6,7 @@ from .serializers import ContactSerializer
 
 
 # Create your views here.
-@api_view(["GET", "POST"])
+@api_view(["POST"])
 def create_contact(request):
     if request.method == "POST":
 
@@ -20,9 +20,26 @@ def create_contact(request):
                 serializer.data, status=status.HTTP_201_CREATED
             )  # returns the contact's data
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-    elif request.method == "GET":
-        contacts = Contact.objects.all()
-        serializer = ContactSerializer(
-            contacts, many=True
-        )  # tells the serializer that you're passing a queryset
-        return Response(serializer.data)
+
+
+@api_view(["GET"])
+def list_contacts(request):
+    contacts = Contact.objects.all()
+    serializer = ContactSerializer(
+        contacts, many=True
+    )  # tells the serializer that you're passing a queryset
+    return Response(serializer.data)
+
+
+@api_view(["DELETE"])
+def delete_contact(request, id):
+    try:
+        contact = Contact.objects.get(id=id)
+        contact.delete()
+        return Response(
+            {"message": "Contact not found"}, status=status.HTTP_404_NOT_FOUND
+        )
+    except Contact.DoesNotExist:
+        return Response(
+            {"message": "Deleted successfully"}, status=status.HTTP_204_NO_CONTENT
+        )
