@@ -37,7 +37,7 @@ Base URL: https://smartmate-49ddea62e918.herokuapp.com/
     "first_name": "John",
     "last_name": "Doe",
     "phone_number": "+1234567890"
-    }```
+    }
 - iii Delete a contact
     - Method: DELETE
     - URL: /api/contact/<id>

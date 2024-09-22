@@ -7,9 +7,16 @@ from .serializers import ContactSerializer
 
 
 # Create your views here.
-@api_view(["POST"])
-def create_contact(request):
-    if request.method == "POST":
+@api_view(["GET", "POST"])
+def list_all_or_create_contact(request):
+    if request.method == "GET":
+        contacts = Contact.objects.all()
+        serializer = ContactSerializer(
+            contacts, many=True
+        )  # tells the serializer that you're passing a queryset
+        return Response(serializer.data)
+
+    elif request.method == "POST":
 
         serializer = ContactSerializer(
             data=request.data
@@ -21,15 +28,6 @@ def create_contact(request):
                 serializer.data, status=status.HTTP_201_CREATED
             )  # returns the contact's data
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-
-@api_view(["GET"])
-def list_contacts(request):
-    contacts = Contact.objects.all()
-    serializer = ContactSerializer(
-        contacts, many=True
-    )  # tells the serializer that you're passing a queryset
-    return Response(serializer.data)
 
 
 @api_view(["DELETE"])
