@@ -9,15 +9,16 @@ This API allows you to create, list, and delete emergency contacts. Below are th
 - Django 5.1.1
 - Pip
 
-Clone the Repository
-cd smartmate
-Set Up and activate a Virtual Environment
-Install dependencies:
+### Steps
+- Clone the Repository
+- cd smartmate
+- Set Up and activate a Virtual Environment
+- Install dependencies:
 ```bash pip install -r requirements.txt```
-Run migrations
-Run project locally
+- Run migrations
+- Run project locally
 ```bash python manage.py runserver```
-Launch http://localhost:8000/api/contacts/ in browser
+- Launch http://localhost:8000/api/contacts/ in browser
 
 # 2. Testing API
 API can be tested using the following endpoint on the deployed version of the app:
