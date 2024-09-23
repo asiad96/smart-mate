@@ -36,7 +36,7 @@ Base URL: https://smartmate-49ddea62e918.herokuapp.com/
     ```bash {
     "first_name": "John",
     "last_name": "Doe",
-    "phone_number": "+1234567890"
+    "phone_number": "+12345607890"
     }
 - iii Delete a contact
     - Method: DELETE
