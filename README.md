@@ -43,22 +43,14 @@ Base URL: https://smartmate-49ddea62e918.herokuapp.com/
     "last_name": "Doe",
     "phone_number": "+12345607890"
     }
-
-
-
-
-
-
-
-
-
-
+    ```
 
     **Example `curl` Command**:
     ```
-    - curl -X POST http://localhost:8000/api/contacts/ \
+      curl -X POST http://localhost:8000/api/contacts/ \
       -H "Content-Type: application/json" \
-      -d '{"first_name": "John", "last_name": "Doe", "phone_number": "+12345607890"}'```
+      -d '{"first_name": "John", "last_name": "Doe", "phone_number": "+12345607890"}'
+    ```
 
 - iii Delete a contact
     - Method: DELETE
