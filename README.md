@@ -57,4 +57,4 @@ Base URL: https://smartmate-49ddea62e918.herokuapp.com/
     - **Method**: DELETE
     - **URL**: /api/contact/id
     - **Example `curl` Command**:
-    ```curl -X DELETE curl -X GET http://localhost:8000/api/contacts/1```
+    ```curl -X DELETE http://localhost:8000/api/contacts/1```
