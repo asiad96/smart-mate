@@ -27,10 +27,11 @@ API can be tested using the following endpoint on the deployed version of the ap
 Base URL: https://smartmate-49ddea62e918.herokuapp.com/
 
 - i List all contacts
-    - Method: GET
-    - URL /api/contacts/
+    - **Method**: GET
+    - **URL**: /api/contacts/
     - List of all contact.
-    - curl -X GET http://localhost:8000/api/contacts/
+    - **Example `curl` Command**:
+    ```curl -X GET http://localhost:8000/api/contacts/```
 
 - ii Create a contact
     - **Method**: POST
@@ -53,6 +54,7 @@ Base URL: https://smartmate-49ddea62e918.herokuapp.com/
     ```
 
 - iii Delete a contact
-    - Method: DELETE
-    - URL: /api/contact/id
-    - curl -X DELETE curl -X GET http://localhost:8000/api/contacts/1
+    - **Method**: DELETE
+    - **URL**: /api/contact/id
+    - **Example `curl` Command**:
+    ```curl -X DELETE curl -X GET http://localhost:8000/api/contacts/1```
