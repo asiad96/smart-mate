@@ -31,7 +31,7 @@ Base URL: https://smartmate-49ddea62e918.herokuapp.com/
     - List of all contact.
 - ii Create a contact
     - Method: POST
-    - URL: /api/create
+    - URL: /api/contacts/
     - Request JSON Body:
     ```bash {
     "first_name": "John",
