@@ -41,7 +41,7 @@ Base URL: https://smartmate-49ddea62e918.herokuapp.com/
     "first_name": "John",
     "last_name": "Doe",
     "phone_number": "+12345607890"
-    }```
+    } ```
 
     - curl -X POST http://localhost:8000/api/contacts/ \
       -H "Content-Type: application/json" \
