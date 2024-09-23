@@ -36,7 +36,7 @@ Base URL: https://smartmate-49ddea62e918.herokuapp.com/
     - **Method**: POST
     - **URL**: `/api/contacts/`
     - **Phone Number Format**: The `phone_number` field needs to be in the **E.16 format** (e.g., `+12302340987`)
-    ### Request JSON Body:
+     **Request JSON Body**:
     ```json
     {
     "first_name": "John",
@@ -45,7 +45,16 @@ Base URL: https://smartmate-49ddea62e918.herokuapp.com/
     }
 
 
-    #### Example `curl` Command:
+
+
+
+
+
+
+
+
+
+    **Example `curl` Command**:
     ```
     - curl -X POST http://localhost:8000/api/contacts/ \
       -H "Content-Type: application/json" \
