@@ -7,14 +7,14 @@ This API allows you to create, list, and delete emergency contacts. Below are th
 ### Prerequisites:
 - Python 3.10 or higher
 - Django 5.1.1
-- Pip
+- pip
 
 ### Steps
-- Clone the Repository
-- cd smartmate
-- Set Up and activate a Virtual Environment
+- Clone the repository
+- `cd smartmate`
+- Set up and activate a Virtual Environment
 - Install dependencies:
-```pip install...```
+```pip install -r requirements.txt```
 - Run migrations:
 ```python manage.py migrations```
 - Run project locally:
@@ -28,7 +28,7 @@ Base URL: https://smartmate-49ddea62e918.herokuapp.com/
 
 - i List all contacts
     - **Method**: GET
-    - **URL**: /api/contacts/
+    - **URL**: `/api/contacts/`
     - List of all contact.
     - **Example `curl` Command**:
     ```curl -X GET http://localhost:8000/api/contacts/```
